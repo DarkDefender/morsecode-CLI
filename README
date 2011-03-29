@@ -1,0 +1,19 @@
+This is a program to convert text to morsecode (written/sound),
+morsecode to text (written/sound).
+
+To use it you must have python 3.
+
+Usage:
+Text to written morsecode
+python3 morse.py <text here>
+
+Written morsecode to text
+python3 morse.py -m "<morsecode here>"
+
+Text to morsecode (sound)
+python3 morse.py -p <text here>
+
+Sound to text
+python3 morse.py -d <wavsoundfile>
+
+Note that it probably only can decode morse created with this program.
