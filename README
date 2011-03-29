@@ -1,7 +1,7 @@
 This is a program to convert text to morsecode (written/sound),
 morsecode to text (written/sound).
 
-To use it you must have python 3.
+To use it you must have python 3 and pygame for sound playback.
 
 Usage:
 Text to written morsecode
