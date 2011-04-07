@@ -1,11 +1,16 @@
 import pygame
 
+class Sound:
+    short   = 0
+    long    = 1
+    silence = 2
+
 def playmorse(sound):
-    if sound == "short":
+    if sound == Sound.short:
         pygame.mixer.music.load("sounds/morse_short.wav")
-    elif sound == "long":
+    elif sound == Sound.long:
         pygame.mixer.music.load("sounds/morse_long.wav")
-    elif sound == "silence":
+    elif sound == Sound.silence:
         pygame.mixer.music.load("sounds/silenceshort.wav")
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy():
@@ -17,11 +22,11 @@ def morsetosound(morsecode):
     strpos=0
     while strpos <= len(morsecode) - 1:
         if morsecode[strpos] == ".":
-            playmorse("short")
+            playmorse(Sound.short)
         elif morsecode[strpos] == "_":
-            playmorse("long")
+            playmorse(Sound.long)
         else:
-            playmorse("silence")
+            playmorse(Sound.silence)
         strpos += 1
 
 pygame.quit()
